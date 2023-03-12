@@ -4,7 +4,7 @@
 
 A CLI Python program showing arrival times &amp; service information for NYC Subway stations.<br>
 
-![screenshot](readme/sample.jpg)
+<img src="readme/sample.jpg" alt="screenshot" width="400">
 
 ## Requirements:
 * MTA API key<br>
@@ -29,13 +29,13 @@ It takes a tiny bit of prep. work, but it's otherwise very easy to use (& unders
 5. Run in CLI<br><br>
 
 Has fuzzy autocomplete for station name search:<br><br>
-![union sq search](readme/fuzzysearch01.jpg)<br><br>
-![union sq search](readme/fuzzysearch02.jpg)<br><br>
+<img src="readme/fuzzysearch01.jpg" alt="union sq search" width="350"><br>
+<img src="readme/fuzzysearch02.jpg" alt="union sq search" width="350"><br>
 
 And also has an option for default settings to save your preferred station. To reset, enter ```-r``` or ```--reset``` as a CLI argument.<br><br>
 
 Will tell you of upcoming service announcements as well as current ones:<br><br>
-![service alerts](readme/service01.jpg)
+<img src="readme/service01.jpg" alt="servicealerts" width="350"><br>
 
 It's written to be (reasonably) robust when used in good faith :muscle:
 
