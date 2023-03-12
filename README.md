@@ -4,7 +4,7 @@
 
 A CLI Python program showing arrival times &amp; service information for NYC Subway stations.<br>
 
-![screenshot](readme/example.jpg)
+![screenshot](readme/sample.jpg)
 
 ## Requirements:
 * MTA API key<br>
