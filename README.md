@@ -25,7 +25,11 @@ pip install -r req-lib.txt --user
 It takes a tiny bit of prep. work, but it's otherwise very easy to use (& understand):<br>
 1. [Get an API key](https://api.mta.info/#/signup)<br>
 2. [Install the modules/packages/libraries](https://github.com/otherfutures/nyc-subway-time/edit/main/README.md#install-modules)<br>
-3. Replace protobuf3-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder above). The only difference between the two is the latter changes all ```long``` to ```int```; the main program cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br>
+3. Replace protobuf3-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder above). The only difference between the two is the latter changes all ```long``` to ```int```; ```nyc-subway-time.py``` cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br><br>If you're having trouble finding where your packages are, try running the following in Python to get the folder pathname:
+```python
+import site
+print(site.getsitepackages())
+```
 4. Get source code (i.e. ```subway_time.py```) and static files (found in [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder); be sure to keep everything in the same working dir/folder<br>
 5. Run in CLI<br><br>
 
@@ -56,6 +60,6 @@ python subway-time.py -r -s
 * NJ PATH
 
 ## See Also:
-Other Python realtime subway lookups; invaluable to me while researching & building this project. :D
+Other Python realtime subway lookups; very helpful to me while researching & building this project! :D
 * [underground](https://github.com/nolanbconaway/underground)
 * [nyct-gtfs](https://github.com/Andrew-Dickinson/nyct-gtfs)
