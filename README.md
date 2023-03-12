@@ -13,9 +13,10 @@ A CLI Python program showing arrival times &amp; service information for NYC Sub
 * ```transfers.txt```<br>
 * ```stations.csv```<br>
 * ```protobuf-to-dict-update.py```<br>
-* ```subway_time.py```<br><br>
+* ```subway_time.py```<br>
+* python 3.x or above<br><br>
 
-## Install modules:
+## Install modules from req-lib.txt:
 ```sh
 pip install -r req-lib.txt --user
 ```
@@ -41,7 +42,7 @@ It's written to be (reasonably) robust when used in good faith :muscle:
 
 ## CLI Arguments:
 * ```-j``` ```--json```: Keep JSON train info and service alert feeds<br>
-* ```-r``` ```--reset```: Removes/resets user defaults (kept in config.json)<br>
+* ```-r``` ```--reset```: Removes/resets user defaults (kept in ```config.json```)<br>
 * ```-s``` ```--service```: Show full service alert after each timetable<br><br>
 
 ### Example usage:<br>
@@ -54,6 +55,7 @@ python subway-time.py -r -s
 * MTA buses
 * NJ PATH
 
-## See Also
+## See Also:
+Other Python realtime subway lookups; invaluable to me while researching & building this project. :D
 * [underground](https://github.com/nolanbconaway/underground)
 * [nyct-gtfs](https://github.com/Andrew-Dickinson/nyct-gtfs)
