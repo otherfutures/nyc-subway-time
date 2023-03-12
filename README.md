@@ -14,7 +14,9 @@ A CLI Python program showing arrival times &amp; service information for NYC Sub
 * ```subway_time.py```<br><br>
 
 ## Install modules:
-```pip install -r req-lib.txt --user```<br>
+```sh
+pip install -r req-lib.txt --user
+```<br>
 
 ## Long Description:
 It takes a tiny bit of prep. work, but it's otherwise very easy to use (& understand):<br>
@@ -42,7 +44,9 @@ It's written to (try and) be robust
 * ```-s``` ```--service```: Show full service alert after each timetable<br><br>
 
 ### Example usage:<br>
-```python subway-time.py -r -s```<br>
+```sh
+python subway-time.py -r -s
+```<br>
 
 ## (Possible) Future Updates:
 * LIRR and/or MetroNorth
