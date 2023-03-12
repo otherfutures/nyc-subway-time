@@ -1,0 +1,6 @@
+requests
+tabulate
+prompt_toolkit
+protobuf3-to-dict
+gtfs-realtime-bindings
+google
