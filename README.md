@@ -26,7 +26,7 @@ It takes a tiny bit of prep. work, but it's otherwise very easy to use (& unders
 
 Has fuzzy autocomplete for station name search:<br><br>
 ![union sq](readme/fuzzysearch01.jpg)<br><br>
-![union sq](readme/fuzzysearch02.jpd)<br><br>
+![union sq](readme/fuzzysearch02.jpg)<br><br>
 
 And also has an option for default settings to save your preferred station. To reset, enter ```-r``` or ```--reset``` as a CLI argument.<br><br>
 
