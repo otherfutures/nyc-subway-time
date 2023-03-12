@@ -16,14 +16,14 @@ A CLI Python program showing arrival times &amp; service information for NYC Sub
 ## Install modules:
 ```sh
 pip install -r req-lib.txt --user
-```<br>
+```
 
 ## Long Description:
 It takes a tiny bit of prep. work, but it's otherwise very easy to use (& understand):<br>
 1. [Get an API key](https://api.mta.info/#/signup)<br>
-2. Install the modules/packages/libraries<br>
-3. Replace protobuf-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the ```requirements``` folder above). The only difference between the two is the latter changes all ```long``` to ```int```; the main program cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br>
-4. Get src code (i.e. ```subway_time.py```) & static files (in ```requirements``` folder); be sure to keep in the same working dir/folder<br>
+2. [Install the modules/packages/libraries](https://github.com/otherfutures/nyc-subway-time/edit/main/README.md#install-modules)<br>
+3. Replace protobuf-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder above). The only difference between the two is the latter changes all ```long``` to ```int```; the main program cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br>
+4. Get src code (i.e. ```subway_time.py```) and static files (found in [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder); be sure to keep everything in the same working dir/folder<br>
 5. Run in CLI<br><br>
 
 Has fuzzy autocomplete for station name search:<br><br>
@@ -36,7 +36,7 @@ Will tell you of upcoming service announcements as well as current ones:<br><br>
 ![service](readme/service01.jpg)
 ![service](readme/service02.jpg)
 
-It's written to (try and) be robust
+It's written to (try and) be robust :muscle:
 
 ## CLI Arguments:
 * ```-j``` ```--json```: Keep JSON train info and service alert feeds<br>
@@ -46,7 +46,7 @@ It's written to (try and) be robust
 ### Example usage:<br>
 ```sh
 python subway-time.py -r -s
-```<br>
+```
 
 ## (Possible) Future Updates:
 * LIRR and/or MetroNorth
