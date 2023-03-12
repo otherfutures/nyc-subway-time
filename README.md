@@ -36,7 +36,7 @@ Will tell you of upcoming service announcements as well as current ones:<br><br>
 ![service](readme/service01.jpg)
 ![service](readme/service02.jpg)
 
-It's written to (try and) be robust :muscle:
+It's written to be (reasonably) robust when used in good faith :muscle:
 
 ## CLI Arguments:
 * ```-j``` ```--json```: Keep JSON train info and service alert feeds<br>
