@@ -31,7 +31,8 @@ import site
 print(site.getsitepackages())
 ```
 4. Get source code (i.e. ```subway_time.py```) and static files (found in [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder); be sure to keep everything in the same working dir/folder<br>
-5. Run in CLI<br><br>
+5. Add API key to code (ln 17: API_KEY)
+6. Run<br><br>
 
 Has fuzzy autocomplete for station name search:<br><br>
 <img src="readme/fuzzysearch01.jpg" alt="union sq search" width="350"><br>
