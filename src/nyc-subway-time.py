@@ -68,7 +68,7 @@ def main():
                     service_alert,
                 )
                 if SERVICE:  # Prints the full service alert msg. if arg
-                    service_info(service_alert, line, stop)
+                    service_info(service_alert, line, stop, name)
 
     # Deletes JSON feeds if CLI arg not entered by user
     if not SAVE_JSON:
