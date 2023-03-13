@@ -38,7 +38,7 @@ Has fuzzy autocomplete for station name search:<br><br>
 <img src="readme/fuzzysearch01.jpg" alt="union sq search" width="350"><br>
 <img src="readme/fuzzysearch02.jpg" alt="union sq search" width="350"><br>
 
-And also has an option for default settings to save your preferred station. To reset, enter ```-r``` or ```--reset``` as a CLI argument.<br><br>
+And also has an option for default settings to save your preferred station. To reset, enter ```-r``` or ```--reset``` as a CLI argument.<br>
 
 Will tell you of upcoming service announcements as well as current ones:<br><br>
 <img src="readme/service01.jpg" alt="servicealerts" width="350"><br>
