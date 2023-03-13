@@ -2,7 +2,7 @@
 
 ## Short Description<br>
 
-A CLI Python program showing arrival timetables &amp; service information for NYC Subway stations.<br>
+A CLI Python program showing arrival timetables, service information, & ADA access for NYC Subway stations.<br>
 
 <img src="readme/sample.jpg" alt="screenshot" width="400">
 
