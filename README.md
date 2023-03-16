@@ -12,7 +12,7 @@ A CLI Python program showing arrival timetables, service information, & ADA acce
 * ```stop.txt```<br>
 * ```transfers.txt```<br>
 * ```stations.csv```<br>
-* ```protobuf-to-dict-update.py```<br>
+* ```protobuf-to-dict-update.py```(might be optional, see below)<br>
 * ```subway_time.py```<br>
 * python 3.x or above<br><br>
 
@@ -25,7 +25,12 @@ pip install -r req-lib.txt --user
 It takes a tiny bit of prep. work, but it's otherwise very easy to use (& understand):<br>
 1. [Get an API key](https://api.mta.info/#/signup)<br>
 2. [Install the modules/packages/libraries](https://github.com/otherfutures/nyc-subway-time/edit/main/README.md#install-modules)<br>
-3. Replace protobuf3-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder above). The only difference between the two is the latter changes all ```long``` to ```int```; ```nyc-subway-time.py``` cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br><br>If you're having trouble finding where your packages are, try running the following in Python to get the folder pathname:
+3. (**OPTIONAL, depending on whether the library is giving you trouble**)<br>
+Replace protobuf3-to-dict package code with that of ```protobuf-to-dict-fix.py``` (found in the [requirements](https://github.com/otherfutures/nyc-subway-time/tree/main/requirements) folder above). The only difference between the two is the latter changes all ```long``` to ```int```; ```nyc-subway-time.py``` cannot run without the package, & the package cannot run in python 3 and above while ```long``` exists<br><br>If you're having trouble finding where your packages are, try running
+```python
+pip show protobuf3-to-dict
+```
+or alternatively, try running the following in a Python file to get the folder pathname:
 ```python
 import site
 print(site.getsitepackages())
