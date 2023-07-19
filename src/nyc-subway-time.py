@@ -18,6 +18,10 @@ API_KEY = ""
 
 
 def main():
+    if not API_KEY:
+        print("Missing API Key! Get one at https://api.mta.info/#/signup")
+        quit()
+
     if not os.path.isfile("new stations.csv"):
         make_new_stations_csv()
 
@@ -113,17 +117,23 @@ def cli_args():
 def make_new_stations_csv():
     """Almost all subseq. func. in this prog. rely on this new, conglom. csv file"""
 
+    # Gets abs. filepaths for static files in requirments dir.
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    transfers_file = os.path.join(script_dir, "..", "requirements", "transfers.txt")
+    stops_file = os.path.join(script_dir, "..", "requirements", "stops.txt")
+    stations_file = os.path.join(script_dir, "..", "requirements", "stations.csv")
+
     # Checks for MTA static files (i.e. non real time data)
     if (
-        not os.path.isfile("transfers.txt")
-        or not os.path.isfile("stops.txt")
-        or not os.path.isfile("stations.csv")
+        not os.path.isfile(transfers_file)
+        or not os.path.isfile(stops_file)
+        or not os.path.isfile(stations_file)
     ):
         print(
-            f"Error: Missing files from working directory!\n\nPlease make sure the "
-            f"following are in the same folder as the python source code:"
+            f"Error: Missing static files!\n\nPlease make sure the "
+            f"following are in the requirements folder:"
             f"\n\t• stops.txt\n\t• transfers.txt\n\t• stations.csv\n\n"
-            f"These static files can be found at:"
+            f"These static files can downloaded from:"
             f"\n\t• (all static files) http://web.mta.info/developers/developer-data-terms.html#data"
             f"\n\t• (zip of txt files) http://web.mta.info/developers/data/nyct/subway/google_transit.zip"
             f"\n\t• (stations.csv) https://atisdata.s3.amazonaws.com/Station/Stations.csv"
@@ -132,7 +142,7 @@ def make_new_stations_csv():
 
     # Correct MTA inconsist. by changing stop_id 140 (inop.) to 142
     transfers_dict = {}
-    with open("transfers.txt", "r+") as f:
+    with open(transfers_file, "r+") as f:
         content = f.read()
         modified_content = content.replace("140", "142")
         f.seek(0)
@@ -148,7 +158,7 @@ def make_new_stations_csv():
             if from_id != to_id:
                 transfers_dict[from_id] = to_id
 
-    with open("stations.csv", "r") as f_in, open(
+    with open(stations_file, "r") as f_in, open(
         "new stations.csv", "w", newline=""
     ) as f_out:
         reader = csv.reader(f_in)
@@ -380,6 +390,12 @@ def get_feed(stop_name_dict, id_lines_feed_dict):
         # Gets GTFS (i.e. real time) train data
         HEADER = {"x-api-key": API_KEY}
         response = requests.get(url, headers=HEADER)
+        if response.status_code == 403:
+            print(
+                "Error: 403 Forbidden - Access denied. Please check credentials."
+                " A new API key can be created here: https://api.mta.info/#/AccessKey"
+                " (N.B. Sometimes a new API key may take a few minutes to work.)"
+            )
 
         # Decodes GTFS bin. into readable text
         feed = gtfs_realtime_pb2.FeedMessage()
