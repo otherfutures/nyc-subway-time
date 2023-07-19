@@ -117,7 +117,7 @@ def make_new_stations_csv():
     if (
         not os.path.isfile("transfers.txt")
         or not os.path.isfile("stops.txt")
-        or not os.path.isfile("service.csv")
+        or not os.path.isfile("stations.csv")
     ):
         print(
             f"Error: Missing files from working directory!\n\nPlease make sure the "
@@ -202,7 +202,7 @@ def get_info():
     retrieves list of stop IDs from user input (from the above func.);
     returns station name (for timetables), realtime feeds, IDs, & train lines
     """
-    with open("test new stations.csv", "r") as f:
+    with open("new stations.csv", "r") as f:
         next(f)  # Skip header
         reader = csv.reader(f)
 
