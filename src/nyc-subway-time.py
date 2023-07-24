@@ -10,7 +10,6 @@ from prompt_toolkit import prompt
 from prompt_toolkit.completion import FuzzyWordCompleter
 from protobuf_to_dict import protobuf_to_dict
 from google.transit import gtfs_realtime_pb2
-from datetime import datetime, timedelta
 from tabulate import tabulate
 
 
@@ -102,7 +101,7 @@ def cli_args():
         "--service",
         action="store_true",
         default=False,
-        help="Show service alert messages for station",
+        help="Show full service alert messages for station",
     )
 
     args = parser.parse_args()
@@ -396,6 +395,7 @@ def get_feed(stop_name_dict, id_lines_feed_dict):
                 " A new API key can be created here: https://api.mta.info/#/AccessKey"
                 " (N.B. Sometimes a new API key may take a few minutes to work.)"
             )
+            break
 
         # Decodes GTFS bin. into readable text
         feed = gtfs_realtime_pb2.FeedMessage()
