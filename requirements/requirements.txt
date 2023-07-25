@@ -1,7 +1,7 @@
-requests
-tabulate
+gtfs-realtime-bindings
+google
 prompt_toolkit
 protobuf3-to-dict
 pytz
-gtfs-realtime-bindings
-google
+requests
+tabulate

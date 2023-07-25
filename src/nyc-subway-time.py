@@ -1,10 +1,13 @@
+# Native lib.
 import os
 import csv
-import requests
 import json
 import argparse
 import shutil
 import re
+
+# 3rd Party lib.
+import requests
 import pytz
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import FuzzyWordCompleter
